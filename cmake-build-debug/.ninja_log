@@ -1,0 +1,5 @@
+# ninja log v6
+0	40	1787235737739233762	CMakeFiles/pcb_simulator.dir/utils/errorhandler.cpp.o	ed273dae00ded4e7
+1	44	1787524027891567643	build.ninja	ffaca82e58c7b6d6
+2	137	1787521686398199783	CMakeFiles/pcb_simulator.dir/components/component.cpp.o	4a12e3021a537873
+2	137	1787521686397821574	CMakeFiles/pcb_simulator.dir/components/pin.cpp.o	33ff2e047ecc3931
