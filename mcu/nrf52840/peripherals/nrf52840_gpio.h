@@ -13,7 +13,7 @@
 class NRF52840;
 
 //specifying the memory specifications of this peripheral
-class NRF52840_GPIO : public virtual Peripheral<NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE>, public AutoRegister<NRF52840_GPIO, NRF52840> {
+class NRF52840_GPIO : public virtual Peripheral<NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE> {
 private:
     uint64_t out;
 public:
