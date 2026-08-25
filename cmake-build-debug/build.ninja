@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: test
+# Project: pcb_sim_cpp
 # Configurations: Debug
 # =============================================================================
 
@@ -39,104 +39,97 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/omeed/CLionProjects/test/cmake-build-debug/
+cmake_ninja_workdir = /Users/omeed/CLionProjects/pcb_sim_cpp/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target pcb_simulator
+# Object build statements for EXECUTABLE target pcb_sim_cpp
 
 
 #############################################
-# Order-only phony target for pcb_simulator
+# Order-only phony target for pcb_sim_cpp
 
-build cmake_object_order_depends_target_pcb_simulator: phony || .
+build cmake_object_order_depends_target_pcb_sim_cpp: phony || .
 
-build CMakeFiles/pcb_simulator.dir/main.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/main.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/main.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/main.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/main.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir
 
-build CMakeFiles/pcb_simulator.dir/mcu/nrf52840/nrf52840.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/mcu/nrf52840/nrf52840.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/mcu/nrf52840/nrf52840.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/nrf52840.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/mcu/nrf52840/nrf52840.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/nrf52840.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/mcu/nrf52840
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840
 
-build CMakeFiles/pcb_simulator.dir/utils/errorhandler.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/utils/errorhandler.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/utils/errorhandler.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/utils/errorhandler.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/utils/errorhandler.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/utils/errorhandler.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/utils
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/utils
 
-build CMakeFiles/pcb_simulator.dir/mcu/nrf52840/nrf52840_gpio.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/mcu/nrf52840/nrf52840_gpio.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/mcu/nrf52840/nrf52840_gpio.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/mcu/mcu.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/mcu/mcu.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/mcu/mcu.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/mcu/nrf52840
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/mcu
 
-build CMakeFiles/pcb_simulator.dir/mcu/mcu.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/mcu/mcu.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/mcu/mcu.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/components/pin.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/components/pin.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/components/pin.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/mcu
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/components
 
-build CMakeFiles/pcb_simulator.dir/components/pin.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/components/pin.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/components/pin.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/components/component.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/components/component.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/components/component.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/components
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/components
 
-build CMakeFiles/pcb_simulator.dir/components/component.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/components/component.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/components/component.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/components/peripheral.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/components/peripheral.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/components/peripheral.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/components
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/components
 
-build CMakeFiles/pcb_simulator.dir/components/peripheral.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/components/peripheral.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/components/peripheral.cpp.o.d
+build CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/mcu/nrf52840/peripherals/nrf52840_gpio.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/components
-
-build CMakeFiles/pcb_simulator.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o: CXX_COMPILER__pcb_simulator_unscanned_Debug /Users/omeed/CLionProjects/test/mcu/nrf52840/peripherals/nrf52840_gpio.cpp || cmake_object_order_depends_target_pcb_simulator
-  DEP_FILE = CMakeFiles/pcb_simulator.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/test
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/pcb_simulator.dir/mcu/nrf52840/peripherals
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target pcb_simulator
+# Link build statements for EXECUTABLE target pcb_sim_cpp
 
 
 #############################################
-# Link the executable pcb_simulator
+# Link the executable pcb_sim_cpp
 
-build pcb_simulator: CXX_EXECUTABLE_LINKER__pcb_simulator_Debug CMakeFiles/pcb_simulator.dir/main.cpp.o CMakeFiles/pcb_simulator.dir/mcu/nrf52840/nrf52840.cpp.o CMakeFiles/pcb_simulator.dir/utils/errorhandler.cpp.o CMakeFiles/pcb_simulator.dir/mcu/nrf52840/nrf52840_gpio.cpp.o CMakeFiles/pcb_simulator.dir/mcu/mcu.cpp.o CMakeFiles/pcb_simulator.dir/components/pin.cpp.o CMakeFiles/pcb_simulator.dir/components/component.cpp.o CMakeFiles/pcb_simulator.dir/components/peripheral.cpp.o CMakeFiles/pcb_simulator.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o
+build pcb_sim_cpp: CXX_EXECUTABLE_LINKER__pcb_sim_cpp_Debug CMakeFiles/pcb_sim_cpp.dir/main.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/nrf52840.cpp.o CMakeFiles/pcb_sim_cpp.dir/utils/errorhandler.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/mcu.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/pin.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/component.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/peripheral.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk
   LINK_FLAGS = -L/usr/local/opt/llvm/lib
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  -lunicorn
   LINK_PATH = -L/opt/homebrew/lib
-  OBJECT_DIR = CMakeFiles/pcb_simulator.dir
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = pcb_simulator
-  TARGET_PDB = pcb_simulator.dbg
+  TARGET_FILE = pcb_sim_cpp
+  TARGET_PDB = pcb_sim_cpp.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/omeed/CLionProjects/test/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/omeed/CLionProjects/pcb_sim_cpp/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -147,7 +140,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/omeed/CLionProjects/test/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/omeed/CLionProjects/test -B/Users/omeed/CLionProjects/test/cmake-build-debug
+  COMMAND = cd /Users/omeed/CLionProjects/pcb_sim_cpp/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/omeed/CLionProjects/pcb_sim_cpp -B/Users/omeed/CLionProjects/pcb_sim_cpp/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -163,16 +156,16 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/omeed/CLionProjects/test/cmake-build-debug
+# Folder: /Users/omeed/CLionProjects/pcb_sim_cpp/cmake-build-debug
 
 build codegen: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/omeed/CLionProjects/test/cmake-build-debug
+# Folder: /Users/omeed/CLionProjects/pcb_sim_cpp/cmake-build-debug
 
-build all: phony pcb_simulator
+build all: phony pcb_sim_cpp
 
 # =============================================================================
 # Built-in targets
@@ -181,14 +174,14 @@ build all: phony pcb_simulator
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/omeed/CLionProjects/test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/omeed/CLionProjects/pcb_sim_cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/omeed/CLionProjects/test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Users/omeed/CLionProjects/pcb_sim_cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################

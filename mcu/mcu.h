@@ -5,21 +5,30 @@
 #ifndef MCU_H
 #define MCU_H
 #include "../components/pin.h"
-#include "../components/peripheral.h"
+//#include "../components/peripheral.h"
 #include "vector"
 
+
+class IPeripheral;
+
+template<typename TARGET_MCU>
 class MCU {
-private:
-    std::vector<std::unique_ptr<Peripheral>> peripherals;
 protected:
-    void add_peripheral(std::unique_ptr<Peripheral> peripheral) {
-        if (peripheral != nullptr) {
-            peripherals.push_back(std::move(peripheral));
-        }
+    //std::vector<std::unique_ptr<IPeripheral>> peripherals;
+
+    //some weird bs gemini cooked up idk if it works lol
+    static std::vector<std::unique_ptr<IPeripheral>>& get_peripherals() {
+        static std::vector<std::unique_ptr<IPeripheral>> list;
+        return list;
     }
 public:
     virtual ~MCU() = default;
-    virtual void init_peripherals() = 0;
+    static void add_peripheral(std::unique_ptr<IPeripheral> peripheral) {
+        if (peripheral != nullptr) {
+            get_peripherals().push_back(std::move(peripheral));
+        }
+    }
+    static void init_all_peripherals();
 };
 
 

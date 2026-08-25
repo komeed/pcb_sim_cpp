@@ -8,14 +8,21 @@
 #include "components/peripheral.h"
 #include "../nrf52840_registers.h"
 #include <cstring>
+#include "utils/errorhandler.h"
 
-class NRF52840_GPIO : public virtual Peripheral<NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE>  {
+class NRF52840;
+
+//specifying the memory specifications of this peripheral
+class NRF52840_GPIO : public virtual Peripheral<NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE>, public AutoRegister<NRF52840_GPIO, NRF52840> {
 private:
     uint64_t out;
 public:
-    NRF52840_GPIO();
+    NRF52840_GPIO() = default;
+    void init() override;
     uint64_t mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) override;
     void mmio_write(uc_engine *uc, uint64_t offset, unsigned size, uint64_t value, void *user_data) override;
+
+
 };
 
 

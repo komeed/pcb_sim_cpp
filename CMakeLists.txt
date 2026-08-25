@@ -12,8 +12,6 @@ add_executable(pcb_sim_cpp main.cpp
         utils/errorhandler.cpp
         utils/errorhandler.h
         mcu/nrf52840/nrf52840_registers.h
-        mcu/nrf52840/nrf52840_gpio.h
-        mcu/nrf52840/nrf52840_gpio.cpp
         components/pin.h
         components/component.h
         components/led.h

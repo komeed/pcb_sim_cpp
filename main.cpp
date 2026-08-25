@@ -26,7 +26,5 @@ int main() {
     "-T linker.ld "
     "-o firmware.elf"
     );
-    mcu_nrf52840 mcu = {0};
-
-    unicorn_nrf52840_init(mcu);
+    NRF52840* mcu = new NRF52840();
 }

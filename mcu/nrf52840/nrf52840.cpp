@@ -14,7 +14,7 @@ static void hook_code(
     printf("Executing 0x%08llX, size %u\n", address, size);
 }
 
-static void nrf52840_init_mem(uc_engine *uc, NRF52840 *mcu) {
+void NRF52840::nrf52840_init_mem(uc_engine *uc) {
     uc_err err;
 
     //init all the mandatory ram/flash stuff for chip
@@ -44,14 +44,9 @@ static void nrf52840_init_mem(uc_engine *uc, NRF52840 *mcu) {
 
     //so many options; we can have the gpio be controlled by peripheral or chip
     //we can also initialize peripherals manually through chip or what
-
-    err = uc_mmio_map(
-        uc, NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE,
-        gpio_mmio_read, gpio_cont,
-        gpio_mmio_write, gpio_cont);
-    if (err != UC_ERR_OK) {
-        printf("P0 GPIO map failed: %s\n", uc_strerror(err));
-        return;
+    auto& list = get_peripherals();
+    for (int i = 0; i < list.size(); i++) {
+        printf("the peripherals are working i think!! offset: \n");
     }
 }
 
@@ -107,14 +102,14 @@ static void nrf52840_load_data(uc_engine *uc) {
     }
 }
 
-static void unicorn_nrf52840_init(NRF52840* mcu) {
+void NRF52840::unicorn_nrf52840_init() {
 
     uc_engine *uc;
     if (uc_open(UC_ARCH_ARM, UC_MODE_THUMB, &uc) != UC_ERR_OK) {
         printf("Failed to initialize Unicorn\n");
         return;
     }
-    nrf52840_init_mem(uc, mcu);
+    nrf52840_init_mem(uc);
     nrf52840_load_data(uc);
 
     uint32_t vector[2];
@@ -148,11 +143,7 @@ static void unicorn_nrf52840_init(NRF52840* mcu) {
     uc_close(uc);
 }
 
-static void add_peripheral(Peripheral p, uint64_t base_addr, uint64_t size) {
-
-}
-
 NRF52840::NRF52840() {
-    unicorn_nrf52840_init(this);
+    unicorn_nrf52840_init();
 }
 
