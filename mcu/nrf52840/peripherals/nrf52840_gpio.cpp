@@ -8,6 +8,7 @@ REGISTER_PERIPHERAL(NRF52840_GPIO, NRF52840)
 
 void NRF52840_GPIO::init() {
     out = 0;
+    gpio_pins = {0};
 }
 
 uint64_t NRF52840_GPIO::mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) {
@@ -73,9 +74,38 @@ void NRF52840_GPIO::mmio_write(uc_engine *uc, uint64_t offset, unsigned size, ui
     }
     if (is_p1_bool) {
         //if it is p1, replace the top half
-        out = (out & 0x00000000FFFFFFFF) | ((uint64_t)relative_port << 32);
+        set_out((out & 0x00000000FFFFFFFF) | ((uint64_t)relative_port << 32));
     }
     else {
-        out = (out & 0xFFFFFFFF00000000) | (uint64_t) (relative_port);
+        set_out((out & 0xFFFFFFFF00000000) | (uint64_t) (relative_port));
     }
+}
+
+void NRF52840_GPIO::set_out(uint64_t new_out) {
+    uint64_t old_out = out;
+    out = new_out;
+    if (old_out != out) {
+        //printf("out changed from %" PRId64 " to %" PRId64 "\n", old_out, out);
+        nrf52840_gpio_on_changed(old_out, out);
+    }
+}
+
+void NRF52840_GPIO::nrf52840_gpio_on_changed(uint64_t old_value, uint64_t new_value) {
+    uint64_t diff = old_value ^ new_value;
+
+    while (diff > 0) {
+        // 1. Find the number of zeros in front (trailing zeros / index of the lowest 1)
+        int zeros_in_front = __builtin_ctz(diff);
+
+        printf("GPIO: %d changed\n", zeros_in_front);
+
+       // uint64_t singled_out_val = new_value & (1 << zeros_in_front);
+        set_gpio_value(zeros_in_front);
+        // 2. Clear the lowest set bit to move to the next 1
+        diff &= (diff - 1);
+    }
+}
+
+void NRF52840_GPIO::set_gpio_value(uint32_t gpio) {
+
 }

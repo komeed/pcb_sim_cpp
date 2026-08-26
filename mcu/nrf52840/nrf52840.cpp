@@ -14,6 +14,15 @@ static void hook_code(
     printf("Executing 0x%08llX, size %u\n", address, size);
 }
 
+uint64_t mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) {
+    auto p = static_cast<IPeripheral*>(user_data);
+    return p->mmio_read(uc, offset, size, user_data);
+}
+static void mmio_write(uc_engine *uc, uint64_t offset, unsigned size, uint64_t value, void *user_data) {
+    auto p = static_cast<IPeripheral*>(user_data);
+    p->mmio_write(uc, offset, size, value, user_data);
+}
+
 void NRF52840::nrf52840_init_mem(uc_engine *uc) {
     uc_err err;
 
@@ -46,7 +55,13 @@ void NRF52840::nrf52840_init_mem(uc_engine *uc) {
     //we can also initialize peripherals manually through chip or what
     auto& list = get_peripherals();
     for (int i = 0; i < list.size(); i++) {
-        printf("the peripherals are working i think!! offset: \n");
+        printf("the peripherals are working i think!! offset: 0x%" PRIx64 ", size: 0x%" PRIx64 "\n", list[i]->get_start_addr(), list[i]->get_size());
+        err = uc_mmio_map(uc, list[i]->get_start_addr(), list[i]->get_size(),
+            mmio_read, list[i].get(), mmio_write, list[i].get());
+        if (err != UC_ERR_OK) {
+            printf("MMIO map failed: %s\n", uc_strerror(err));
+            return;
+        }
     }
 }
 
@@ -143,7 +158,5 @@ void NRF52840::unicorn_nrf52840_init() {
     uc_close(uc);
 }
 
-NRF52840::NRF52840() {
-    unicorn_nrf52840_init();
-}
+NRF52840::NRF52840() = default;
 

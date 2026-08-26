@@ -21,6 +21,10 @@ class IPeripheral {
 public:
     virtual ~IPeripheral() = default;
     virtual void init() = 0;
+    virtual uint64_t get_start_addr() = 0;
+    virtual uint64_t get_size() = 0;
+    virtual uint64_t mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) = 0;
+    virtual void mmio_write(uc_engine *uc, uint64_t offset, unsigned size, uint64_t value, void *user_data) = 0;
 };
 
 template<uint64_t START_ADDR, uint64_t SIZE>
@@ -32,8 +36,8 @@ protected:
     //void set_mem_info(uint64_t start_addr, uint64_t size) : start_addr(start_addr), size(size) {}
     static inline unsigned char unhandled_mem_arr[SIZE] = {};
 public:
-    virtual uint64_t mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) = 0;
-    virtual void mmio_write(uc_engine *uc, uint64_t offset, unsigned size, uint64_t value, void *user_data) = 0;
+    uint64_t get_start_addr() override { return start_addr; }
+    uint64_t get_size() override { return size; }
 };
 
 template <typename PERIPHERAL_TYPE, typename TARGET_MCU>

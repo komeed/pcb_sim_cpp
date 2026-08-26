@@ -27,4 +27,5 @@ int main() {
     "-o firmware.elf"
     );
     NRF52840* mcu = new NRF52840();
+    mcu->unicorn_nrf52840_init();
 }

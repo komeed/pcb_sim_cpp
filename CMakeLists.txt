@@ -23,7 +23,8 @@ add_executable(pcb_sim_cpp main.cpp
         components/peripheral.cpp
         components/peripheral.h
         mcu/nrf52840/peripherals/nrf52840_gpio.cpp
-        mcu/nrf52840/peripherals/nrf52840_gpio.h)
+        mcu/nrf52840/peripherals/nrf52840_gpio.h
+        components/global_vars.h)
 
 target_include_directories(pcb_sim_cpp PRIVATE
         /opt/homebrew/include
