@@ -4,6 +4,8 @@
 
 #ifndef COMPONENTS_H
 #define COMPONENTS_H
+//alternatively you can have graph system instead of pins and components
+// pins act as sinks while wires carry current through the component
 /*
 typedef enum {
     COMPONENT_NRF52840,

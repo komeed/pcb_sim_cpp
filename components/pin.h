@@ -14,13 +14,20 @@
 //basiclaly the problem is, how can we go from a pin class to a component? and know the component's type
 // basically instantly? (we're not just doing a million dynamic casts)
 
-
 class net;
+class component;
 
 class pin {
 private:
-    uint32_t ID; // unique id assigned to pin correlating to position in global pin array
-    net* net;
+   // uint32_t ID; // unique id assigned to pin correlating to position in global pin array
+    net* wired_net;
+    uint32_t is_sink; // if it is a sink, voltage can't pass through it
+    //if it isn't a sink, you can try dynamic casts to find the actual component it's referencing
+    component* parent_comp;
+    float voltage;
+public:
+    pin(component* comp, uint32_t is_sink);
+    void connect_to_pin(pin* other);
 };
 
 class global_pin_arr {
@@ -36,8 +43,10 @@ public:
 
 class net {
     std::vector<pin*> pins;
+    float voltage; // nets hold voltage
+public:
+    net();
+
 };
-
-
 
 #endif //PIN_H
