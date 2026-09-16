@@ -26,6 +26,10 @@ add_executable(pcb_sim_cpp main.cpp
         mcu/nrf52840/peripherals/nrf52840_gpio.h
         components/resistor.h
         components/capacitor.h
+        mcu/nrf52840/peripherals/nrf52840_timer.cpp
+        mcu/nrf52840/peripherals/nrf52840_timer.h
+        mcu/nrf52840/peripherals/nrf52840_timer.h
+        mcu/nrf52840/peripherals/nrf52840_timer.h
 )
 
 target_include_directories(pcb_sim_cpp PRIVATE

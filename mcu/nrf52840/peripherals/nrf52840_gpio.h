@@ -17,6 +17,7 @@ class NRF52840;
 class NRF52840_GPIO : public virtual Peripheral<NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE> {
 private:
     uint64_t out; // read only
+
 public:
     NRF52840_GPIO() = default;
     void init() override;
@@ -27,11 +28,9 @@ public:
 
     /// gpio connectivity stuff
 
-private:
-    pin gpio_pins[NRF52840_NUM_GPIO];
 public:
-    void connect_net_to_gpio(net* net);
-    void set_gpio_value(uint32_t gpio);
+   // void connect_net_to_gpio(net* net);
+   // void set_gpio_value(uint32_t gpio);
 
 };
 

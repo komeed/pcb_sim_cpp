@@ -6,13 +6,7 @@
 #include "../../elf/elf32.h"
 #include "../../utils/errorhandler.h"
 
-static void hook_code(
-    uc_engine *uc,
-    uint64_t address,
-    uint32_t size,
-    void *user_data) {
-    printf("Executing 0x%08llX, size %u\n", address, size);
-}
+
 
 uint64_t mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) {
     auto p = static_cast<IPeripheral*>(user_data);
@@ -63,6 +57,8 @@ void NRF52840::nrf52840_init_mem(uc_engine *uc) {
             return;
         }
     }
+    //we need to store the timer peripheral into hook
+
 }
 
 static void nrf52840_load_data(uc_engine *uc) {
@@ -118,8 +114,6 @@ static void nrf52840_load_data(uc_engine *uc) {
 }
 
 void NRF52840::unicorn_nrf52840_init() {
-
-    uc_engine *uc;
     if (uc_open(UC_ARCH_ARM, UC_MODE_THUMB, &uc) != UC_ERR_OK) {
         printf("Failed to initialize Unicorn\n");
         return;
@@ -135,6 +129,8 @@ void NRF52840::unicorn_nrf52840_init() {
          sizeof(vector));
     printf("Initial SP:    0x%08X\n", vector[0]);
     printf("Reset vector:  0x%08X\n", vector[1]);
+    reset_vector = vector[1];
+    pc = reset_vector;
 
     uint32_t pc = vector[1] & ~1u;
 
@@ -143,20 +139,37 @@ void NRF52840::unicorn_nrf52840_init() {
 
     printf("Starting emulation with pc %d...\n", pc);
 
-
-    uc_err err2 = uc_emu_start(
-    uc,
-    vector[1],
-0,
-0,
-10000
-    );
-
-    printf("Emulation stopped: %s\n",
+   /* printf("Emulation stopped: %s\n",
            uc_strerror(err2));
+*/
+   // uc_close(uc);
+}
 
+int8_t NRF52840::process_instructions() {
+    int batch = NRF52840_BATCH_SIZE; //100 instructions at a time
+    uint64_t start_addr = pc | 1;
+    uc_err err = uc_emu_start(
+    uc,
+    start_addr,
+0,
+0,
+batch
+    );
+    if (err == UC_ERR_OK) {
+        clock_cycle += batch;
+    }
+    else {
+        printf("Emulation error: %s\n",
+           uc_strerror(err));
+        return 0;
+    }
+    uc_reg_read(uc, UC_ARM_REG_PC, &pc);
+    return 1;
+}
+
+void NRF52840::close_emulation() {
     uc_close(uc);
 }
 
-NRF52840::NRF52840() = default;
+NRF52840::NRF52840() {}
 

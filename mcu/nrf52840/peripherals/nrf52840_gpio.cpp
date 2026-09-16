@@ -8,7 +8,6 @@ REGISTER_PERIPHERAL(NRF52840_GPIO, NRF52840)
 
 void NRF52840_GPIO::init() {
     out = 0;
-    gpio_pins = {0};
 }
 
 uint64_t NRF52840_GPIO::mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) {
@@ -100,12 +99,12 @@ void NRF52840_GPIO::nrf52840_gpio_on_changed(uint64_t old_value, uint64_t new_va
         printf("GPIO: %d changed\n", zeros_in_front);
 
        // uint64_t singled_out_val = new_value & (1 << zeros_in_front);
-        set_gpio_value(zeros_in_front);
+       // set_gpio_value(zeros_in_front);
         // 2. Clear the lowest set bit to move to the next 1
         diff &= (diff - 1);
     }
 }
-
+/*
 void NRF52840_GPIO::set_gpio_value(uint32_t gpio) {
 
-}
+}*/
