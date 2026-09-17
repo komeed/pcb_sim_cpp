@@ -13,7 +13,7 @@
 #include "peripherals/nrf52840_gpio.h"
 #include "peripherals/nrf52840_timer.h"
 
-#define NRF52840_BATCH_SIZE 100000
+#define NRF52840_BATCH_SIZE 6400
 #define NRF52840_CLOCK_FREQ 64000000
 
 class NRF52840 : public MCU<NRF52840> {

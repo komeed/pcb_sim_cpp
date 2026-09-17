@@ -17,6 +17,7 @@ class NRF52840;
 class NRF52840_GPIO : public virtual Peripheral<NRF52840_GPIO_BASE, NRF52840_GPIO_PAGE_SIZE> {
 private:
     uint64_t out; // read only
+    uint64_t dir;
 
 public:
     NRF52840_GPIO() = default;
@@ -24,7 +25,8 @@ public:
     uint64_t mmio_read(uc_engine *uc, uint64_t offset, unsigned size, void *user_data) override;
     void mmio_write(uc_engine *uc, uint64_t offset, unsigned size, uint64_t value, void *user_data) override;
     void set_out(uint64_t out);
-    void nrf52840_gpio_on_changed(uint64_t old_value, uint64_t new_value);
+    void set_dir(uint64_t new_dir);
+    void nrf52840_gpio_val_on_changed_64(uint64_t old_value, uint64_t new_value, const char* msg);
 
     /// gpio connectivity stuff
 

@@ -105,6 +105,13 @@ build CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o: C
   OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals
 
+build CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_timer.cpp.o: CXX_COMPILER__pcb_sim_cpp_unscanned_Debug /Users/omeed/CLionProjects/pcb_sim_cpp/mcu/nrf52840/peripherals/nrf52840_timer.cpp || cmake_object_order_depends_target_pcb_sim_cpp
+  DEP_FILE = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_timer.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/include -I/Users/omeed/CLionProjects/pcb_sim_cpp
+  OBJECT_DIR = CMakeFiles/pcb_sim_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target pcb_sim_cpp
@@ -113,7 +120,7 @@ build CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o: C
 #############################################
 # Link the executable pcb_sim_cpp
 
-build pcb_sim_cpp: CXX_EXECUTABLE_LINKER__pcb_sim_cpp_Debug CMakeFiles/pcb_sim_cpp.dir/main.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/nrf52840.cpp.o CMakeFiles/pcb_sim_cpp.dir/utils/errorhandler.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/mcu.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/pin.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/component.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/peripheral.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o
+build pcb_sim_cpp: CXX_EXECUTABLE_LINKER__pcb_sim_cpp_Debug CMakeFiles/pcb_sim_cpp.dir/main.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/nrf52840.cpp.o CMakeFiles/pcb_sim_cpp.dir/utils/errorhandler.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/mcu.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/pin.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/component.cpp.o CMakeFiles/pcb_sim_cpp.dir/components/peripheral.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_gpio.cpp.o CMakeFiles/pcb_sim_cpp.dir/mcu/nrf52840/peripherals/nrf52840_timer.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk
   LINK_FLAGS = -L/usr/local/opt/llvm/lib
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  -lunicorn
